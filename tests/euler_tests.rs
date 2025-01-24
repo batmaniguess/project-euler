@@ -23,3 +23,9 @@ fn test_sum_square_difference() {
     assert_eq!(sum_square_difference(10), 2640);
     assert_eq!(sum_square_difference(100), 25164150);
 }
+
+#[test]
+fn test_find_primes() {
+    assert_eq!(find_primes(6), 13);
+    assert_eq!(find_primes(10001), 104743);
+}

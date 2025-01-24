@@ -49,3 +49,35 @@ pub fn sum_square_difference(n: u32) -> u32 {
     let square_of_sums = (n * (n + 1) / 2) * (n * (n + 1) / 2);
     square_of_sums - sum_of_squares
 }
+
+pub fn is_prime(n: u64) -> bool {
+    if n < 2 {
+        return false;
+    }
+    if n == 2 || n == 3 {
+        return true;
+    }
+    if n % 2 == 0 || n % 3 == 0 {
+        return false;
+    }
+    let mut i = 5;
+    while i * i <= n {
+        if n % i == 0 || n % (i + 2) == 0 {
+            return false;
+        }
+        i += 6;
+    }
+    true
+}
+
+pub fn find_primes(n: usize) -> u64 {
+    let mut count = 0;
+    let mut candidate = 1;
+    while count < n {
+        candidate += 1;
+        if is_prime(candidate) {
+            count += 1;
+        }
+    }
+    candidate
+}
