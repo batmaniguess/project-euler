@@ -11,6 +11,8 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     println!("{}", sum_square_difference(100));
     println!("{}", find_primes(10001).unwrap());
     println!("{}", largest_product_series(13).unwrap());
+    println!("{}", special_pythagorean_triplet().unwrap());
+    println!("{}", summation_of_primes(2_000_000));
 
     Ok(())
 }

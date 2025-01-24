@@ -37,3 +37,14 @@ fn test_larget_product() {
     assert_eq!(largest_product_series(4).unwrap(), 5832);
     assert_eq!(largest_product_series(13).unwrap(), 23_514_624_000);
 }
+
+#[test]
+fn test_pythagorean_triplets() {
+    assert_eq!(special_pythagorean_triplet().unwrap(), 31875000);
+}
+
+#[test]
+fn test_summation_of_primes() {
+    assert_eq!(summation_of_primes(10), 17);
+    assert_eq!(summation_of_primes(2_000_000), 142913828922);
+}

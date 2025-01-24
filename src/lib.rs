@@ -130,3 +130,36 @@ pub fn largest_product_series(digits: usize) -> Option<u64> {
         .map(|window| window.iter().product())
         .max()
 }
+
+pub fn special_pythagorean_triplet() -> Option<u64> {
+    for a in 1..1000 {
+        for b in (a + 1)..1000 {
+            let c = 1000 - a - b;
+            if c > b && a * a + b * b == c * c {
+                return Some(a as u64 * b as u64 * c as u64);
+            }
+        }
+    }
+    None
+}
+
+pub fn summation_of_primes(num: u64) -> u64 {
+    let mut sieve = vec![true; num as usize];
+    sieve[0] = false;
+    sieve[1] = false;
+
+    for i in 2..=(num as f64).sqrt() as u64 {
+        if sieve[i as usize] {
+            for j in (i * i..num).step_by(i as usize) {
+                sieve[j as usize] = false;
+            }
+        }
+    }
+
+    sieve
+        .iter()
+        .enumerate()
+        .filter(|&(_, &is_prime)| is_prime)
+        .map(|(i, _)| i as u64)
+        .sum()
+}
