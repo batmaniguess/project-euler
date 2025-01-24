@@ -29,3 +29,9 @@ fn test_find_primes() {
     assert_eq!(find_primes(6), 13);
     assert_eq!(find_primes(10001), 104743);
 }
+
+#[test]
+fn test_larget_product() {
+    assert_eq!(largest_product_series(4), 5832);
+    assert_eq!(largest_product_series(13), 23514624000);
+}
