@@ -17,3 +17,9 @@ fn test_largest_prime_factor() {
     assert_eq!(largest_prime_factor(13195), 29);
     assert_eq!(largest_prime_factor(600851475143), 6857);
 }
+
+#[test]
+fn test_sum_square_difference() {
+    assert_eq!(sum_square_difference(10), 2640);
+    assert_eq!(sum_square_difference(100), 25164150);
+}

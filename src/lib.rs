@@ -43,3 +43,9 @@ pub fn largest_prime_factor(mut n: u64) -> u64 {
     }
     largest
 }
+
+pub fn sum_square_difference(n: u32) -> u32 {
+    let sum_of_squares = n * (n + 1) * (2 * n + 1) / 6;
+    let square_of_sums = (n * (n + 1) / 2) * (n * (n + 1) / 2);
+    square_of_sums - sum_of_squares
+}
